@@ -1,11 +1,12 @@
 package telran.drones.exceptions;
 
 import telran.drones.api.ServiceExceptionMessages;
+import telran.exceptions.NotFoundException;
 
 @SuppressWarnings("serial")
-public class MedicationNotFound extends NotFoundException {
+public class MedicationNotFoundException extends NotFoundException {
 
-	public MedicationNotFound(String message) {
+	public MedicationNotFoundException() {
 		
 		super(ServiceExceptionMessages.MEDICATION_NOT_FOUND);
 		

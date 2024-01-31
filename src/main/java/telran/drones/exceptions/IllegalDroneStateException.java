@@ -6,7 +6,7 @@ import telran.drones.api.ServiceExceptionMessages;
 public class IllegalDroneStateException extends IllegalStateException {
 	
 	public IllegalDroneStateException() {
-		super(ServiceExceptionMessages.DRONE_ALREADY_EXISTS);
+		super(ServiceExceptionMessages.NOT_IDLE_STATE);
 	}
 
 }
