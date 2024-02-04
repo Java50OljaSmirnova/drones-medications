@@ -5,13 +5,15 @@ import lombok.*;
 import telran.drones.dto.ModelType;
 
 @Entity
-@Table(name="drone-models")
+@Table(name="drone_models")
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 public class DroneModel {
 	@Id
 	@Enumerated(EnumType.STRING)
+	@Column(name = "model_name")
 	ModelType modelName;
 	int weight;
 

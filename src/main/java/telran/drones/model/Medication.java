@@ -6,15 +6,13 @@ import lombok.*;
 @Entity
 @Table(name="medications")
 @Getter
-@NoArgsConstructor
-@AllArgsConstructor(access=AccessLevel.PRIVATE)
+@ToString
 public class Medication {
 	@Id
-	@Column(name="medication_code")
 	String code;
-	@Column(name="medication_name")
+	@Column(nullable = false)
 	String name;
-	@Column(name="medication_weight")
+	@Column(nullable = false)
 	int weight;
 
 }
