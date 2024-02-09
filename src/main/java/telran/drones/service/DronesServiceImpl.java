@@ -2,6 +2,7 @@ package telran.drones.service;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -26,6 +27,7 @@ public class DronesServiceImpl implements DronesService {
 	final DroneModelRepo droneModelRepo;
 	final MedicationRepo medicationRepo;
 	final EventLogRepo logRepo;
+	final Map<State,State> statesMachine;
 	@Value("${" + PropertiesNames.CAPACITY_THRESHOLD + ":25}")
 	int capacityThreshold;
 	
@@ -116,6 +118,12 @@ public class DronesServiceImpl implements DronesService {
 	
 	private void logDroneItemsAmount(List<DroneItemsAmount> list) {
 		list.forEach(dia -> log.trace("drone {} items amount {}", dia.getNumber(), dia.getAmount()));
+	}
+
+	@Override
+	public List<EventLogDto> checkHistoryLogs(String droneNumber) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

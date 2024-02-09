@@ -11,5 +11,6 @@ public interface DronesService {
 	List<String> checkAvailableDrones();
 	int checkBatteryCapasity(String droneNumber);
 	List<DroneItemsAmount> checkDroneLoadedItemAmounts();
+	List<EventLogDto> checkHistoryLogs(String droneNumber);
 
 }
